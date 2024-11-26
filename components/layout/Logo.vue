@@ -1,8 +1,7 @@
 <template>
-   <v-main>
-
-     This is Gantt Page 👌👌👌!
-   </v-main>
+  <div>
+    
+  </div>
 </template>
 
 <script lang="ts" setup>

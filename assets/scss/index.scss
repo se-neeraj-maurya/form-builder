@@ -1,3 +1,27 @@
+
+body{
+  font-size: 14px;
+}
+
+/* SIDEBAR STYLE START */
+ul.side-menu {
+  padding: 0 12px;
+  >li{
+    margin: 4px;
+    padding: 4px;
+    cursor: pointer;
+    // border: 1px solid grey;
+    border-radius: 4px;
+    // background: red;
+    &:hover,
+    &.active-menu{
+      background: rgba($color: #000000, $alpha: .10)
+    }
+  }
+}
+
+/* SIDEBAR STYLE END */
+
 .fields-element:hover {
   border-color: green !important;
   cursor: move;

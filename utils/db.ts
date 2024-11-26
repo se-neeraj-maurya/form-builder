@@ -1,4 +1,5 @@
 export default () => {
+  /* Used field type in Form Builder */
   const fieldTypes = [
     {
       type: "text",
@@ -47,37 +48,21 @@ export default () => {
         },
       },
     },
-    {
-      type: "upload",
-      displayName: "File Upload",
-      icon: "mdi-tray-arrow-up",
-      defaultSettings: {
-        label: "Upload File",
-        name: "fileUploadField",
-        required: false,
-        accept: [".jpg", ".png", ".pdf"],
-        maxFileSize: 5, // in MB
-        validation: {
-          errorMessage:
-            "File must be less than 5 MB and in JPG, PNG, or PDF format.",
-        },
-      },
-    },
-    {
-      type: "password",
-      displayName: "Password",
-      icon: "mdi-key",
-      defaultSettings: {
-        label: "Password",
-        placeholder: "Enter password",
-        name: "passwordField",
-        required: true,
-        validation: {
-          minLength: 8,
-          errorMessage: "Password must be at least 8 characters",
-        },
-      },
-    },
+    // {
+    //   type: "password",
+    //   displayName: "Password",
+    //   icon: "mdi-key",
+    //   defaultSettings: {
+    //     label: "Password",
+    //     placeholder: "Enter password",
+    //     name: "passwordField",
+    //     required: true,
+    //     validation: {
+    //       minLength: 8,
+    //       errorMessage: "Password must be at least 8 characters",
+    //     },
+    //   },
+    // },
     {
       type: "select",
       displayName: "Dropdown",
@@ -149,6 +134,22 @@ export default () => {
         },
       },
     },
+    {
+      type: "upload",
+      displayName: "File Upload",
+      icon: "mdi-tray-arrow-up",
+      defaultSettings: {
+        label: "Upload File",
+        name: "fileUploadField",
+        required: false,
+        accept: [".jpg", ".png", ".pdf"],
+        maxFileSize: 5, // in MB
+        validation: {
+          errorMessage:
+            "File must be less than 5 MB and in JPG, PNG, or PDF format.",
+        },
+      },
+    },
     // {
     //   type: "button",
     //   displayName: "Button",
@@ -160,7 +161,46 @@ export default () => {
     //   },
     // },
   ];
+  /* Used status colums in Form Builder */
+  const taskColumns = [
+    {
+      status: "",
+      name:"Yet To Start",
+      color: "#71717a",
+      count: "",
+    },
+    {
+      status: "",
+      name:"In Progress",
+      color: "#22d3ee",
+      count: "",
+    },
+    {
+      status: "",
+      name:"In Review",
+      color: "#eab308",
+      count: "",
+    },
+    {
+      status: "",
+      name:"Ready For Test",
+      color: "#ec4899",
+      count: "",
+    },
+    {
+      status: "",
+      name:"Completed",
+      color: "#22c55e",
+      count: "",
+    },
+    {
+      status: "",
+      name:"Deployed",
+      color: "#14b8a6",
+      count: "",
+    }]
   return {
     fieldTypes,
+    taskColumns,
   };
 };
